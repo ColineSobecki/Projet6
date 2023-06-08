@@ -125,12 +125,39 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+.filters {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 180px;
+	margin-right: 180px;
+}
+
+.box {
+	border: 2px solid #1D6154;
+	border-radius: 20px;
+	border-color: #1D6154;
+	color: #1D6154;
+	padding: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 170px;
+}
+
+.box:hover {
+	background-color: #1D6154;
+	color: #FFFF;
+}
+
 .gallery {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	padding-top: 50px;
 }
 
 .gallery img {
