@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken')
 
 module.exports = (req, res, next) => {
 	try {
+		console.log(req.header)
 		console.log(req.headers.authorization);
 		const token = req.headers.authorization.split(' ')[1]
 		const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET)
@@ -13,6 +14,7 @@ module.exports = (req, res, next) => {
 			next()
 		}
 	} catch {
+		console.log('test')
 		res.status(401).json({
 			error: new Error('You are not authenticated')
 		})

@@ -6,18 +6,64 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="https://kit.fontawesome.com/853831e7cb.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+	<div class="publish_bar_show">
+		<div class="publish_bar" id="publish_bar">
+		  <p id="edit_mode"><i class="fa-sharp fa-regular fa-pen-to-square"></i>Mode édition</p>
+		  <div id="publish_button">publier les changements</div>
+		</div>
+	  </div>
+	  <div class="modal" id="modal">
+		<span class="close">&times;</span>
+		<div class="modal_content">
+		  <h1>Galerie Photo</h1>
+		  <div id="photo">
+			<img src="path_to_image.jpg" alt="Image">
+		  </div>
+		  <button id="add_button">Ajouter une photo</button>
+		  <p class="button_suppress">Supprimer la galerie</p>
+		</div>
+	  </div>
+	  <div class="add_modal" id="add_modal">
+		<span class="previous_arrow"><i class="fa-solid fa-arrow-left"></i></span>
+		<span class="close">&times;</span>
+		<div class="modal_content">
+		  <h1>Ajout photo</h1>
+		<div class="add_photo_container">
+			<i class="fa-regular fa-image"></i>
+			<div class="add_photo_button">+ Ajouter une photo</div>
+		</div>
+		<form>
+			<div class="form_group">
+			  <label for="title">Titre</label>
+			  <br>
+			  <input type="text" id="title" name="title" required>
+			</div>
+			<div class="form_group">
+			  <label for="category">Catégorie</label>
+			  <br>
+			  <div class="input-with-icon">
+				<input type="text" id="category" name="catégorie" required>
+				<select id="category-dropdown"></select>
+			  </div>
+			</div>
+		  </form>
+		  <div id="validate_button">Valider</div>
+		</div>
+	  </div>
+	   
 <header>
 	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li>login</li>
+			<li><a href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
